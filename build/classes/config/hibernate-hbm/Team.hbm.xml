@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-27 17:44:09 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="bean.Team" table="team" catalog="cac">
+        <id name="teamNo" type="java.lang.Integer">
+            <column name="team_no" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="works" class="bean.Works" fetch="select">
+            <column name="works_id" />
+        </many-to-one>
+        <property name="teamName" type="string">
+            <column name="team_name" length="10" not-null="true" unique="true" />
+        </property>
+        <property name="teacher" type="string">
+            <column name="teacher" length="10" not-null="true" />
+        </property>
+        <property name="teacherPhone" type="string">
+            <column name="teacher_phone" length="11" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

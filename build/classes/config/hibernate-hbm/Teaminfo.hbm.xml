@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-27 17:44:09 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="bean.Teaminfo" table="teaminfo" catalog="cac">
+        <composite-id name="id" class="bean.TeaminfoId">
+            <key-property name="teamNo" type="int">
+                <column name="team_no" />
+            </key-property>
+            <key-property name="teamName" type="string">
+                <column name="team_name" length="10" />
+            </key-property>
+            <key-property name="teacher" type="string">
+                <column name="teacher" length="10" />
+            </key-property>
+            <key-property name="teacherPhone" type="string">
+                <column name="teacher_phone" length="11" />
+            </key-property>
+            <key-property name="worksName" type="string">
+                <column name="works_name" length="10" />
+            </key-property>
+            <key-property name="types" type="string">
+                <column name="types" length="11" />
+            </key-property>
+            <key-property name="description" type="string">
+                <column name="description" length="200" />
+            </key-property>
+            <key-property name="id1" type="string">
+                <column name="id1" length="18" />
+            </key-property>
+            <key-property name="id2" type="string">
+                <column name="id2" length="18" />
+            </key-property>
+            <key-property name="id3" type="string">
+                <column name="id3" length="18" />
+            </key-property>
+            <key-property name="school" type="string">
+                <column name="school" length="5" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

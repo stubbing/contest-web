@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-27 17:44:09 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="bean.News" table="news" catalog="cac">
+        <id name="newsId" type="java.lang.Integer">
+            <column name="news_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="adminuser" class="bean.Adminuser" fetch="select">
+            <column name="admin_id" length="5" not-null="true" />
+        </many-to-one>
+        <property name="content" type="string">
+            <column name="content" length="1500" not-null="true" />
+        </property>
+        <property name="title" type="string">
+            <column name="title" length="25" not-null="true" />
+        </property>
+        <property name="summary" type="string">
+            <column name="summary" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>
