@@ -82,4 +82,6 @@ Hibernate 3.2+Spring 4.1+Struts2+MySQL
 <h2>Author</h2>
 <p>Name:Guo Haoming<br/>
 Birth:1995.12.31<br/>
-Email:fsguohm@126.com</p><br/>
+Email:fsguohm@126.com<br />
+See more in <a>https://coding.net/u/shuffle/p/contest-web/git</a>
+</p><br/>
